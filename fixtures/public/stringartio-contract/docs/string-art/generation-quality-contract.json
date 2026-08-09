@@ -1,0 +1,131 @@
+{
+  "appReady": {
+    "allowedQualityModeKeys": [
+      "clean",
+      "accurate"
+    ],
+    "humanReviewRequired": true,
+    "lineCountLimit": 6000,
+    "maxPinCount": 768,
+    "preferredLineCountRange": {
+      "max": 5800,
+      "min": 5200
+    },
+    "promotionProfileKey": "clean",
+    "runtimeTargetMs": 30000
+  },
+  "contractId": "stringartio-generation-quality-contract",
+  "forbiddenConfigFields": {
+    "truthyOrNonzero": [
+      "targetAwareLineReweighting",
+      "targetGuidanceStrength",
+      "targetAwarePruneRatio",
+      "targetAwareSoftPruneRatio",
+      "sourcePseudoTargetStrength"
+    ]
+  },
+  "preferenceLabSuggestion": {
+    "comparisonSize": 192,
+    "repeatCount": 5,
+    "runtimeTargetMs": 30000,
+    "sampleSize": 192
+  },
+  "qualityModel": {
+    "dimensionFloors": {
+      "clumpCleanliness": 0.5,
+      "craftFeasibility": 0.5,
+      "densityBalance": 0.46,
+      "faceLegibility": 0.48,
+      "lineRhythm": 0.42,
+      "mediumSpecificity": 0.45,
+      "shapeLegibility": 0.52
+    },
+    "dimensionWeights": {
+      "clumpCleanliness": 0.18,
+      "densityBalance": 0.14,
+      "faceLegibility": 0.22,
+      "lineRhythm": 0.1,
+      "mediumSpecificity": 0.12,
+      "shapeLegibility": 0.24
+    },
+    "legacyWeights": {
+      "independentQuality": 0.6,
+      "targetSimilarity": 0.4
+    },
+    "name": "perceptual-string-art-v2",
+    "penaltyMode": "subtractive-with-severe-failure-multipliers",
+    "perceptualQualityFloor": 0.45,
+    "perceptualQualityWeights": {
+      "contourClarity": 0.22,
+      "detailPreservation": 0.2,
+      "faceReadability": 0.24,
+      "foregroundSeparation": 0.14,
+      "stringStructure": 0.2
+    },
+    "severeFailureRules": {
+      "blurPenalty": {
+        "multiplier": 0.72,
+        "threshold": 0.56
+      },
+      "clumpVisibilityPenalty": {
+        "multiplier": 0.65,
+        "threshold": 0.58
+      },
+      "faceCollapsePenalty": {
+        "multiplier": 0.55,
+        "threshold": 0.5
+      },
+      "grayBlobPenalty": {
+        "multiplier": 0.6,
+        "threshold": 0.56
+      },
+      "lowSaliencyPenalty": {
+        "multiplier": 0.72,
+        "threshold": 0.62
+      }
+    },
+    "softVisualWash": {
+      "cellDensityScoreMax": 0.39,
+      "contrastScoreMax": 0.46,
+      "inputMinScoreMax": 0.46,
+      "overdrawRateMin": 0.48
+    },
+    "targetRole": "seed",
+    "targetSimilarityWeights": {
+      "candidateScore": 0.01,
+      "edgeSimilarity": 0.28,
+      "faceStructureSimilarity": 0.18,
+      "inputMinScore": 0.06,
+      "localizedDetailScore": 0.22,
+      "ssim": 0.03,
+      "targetScore": 0.14,
+      "visualQualityScore": 0.08
+    },
+    "visualFailurePenaltyWeights": {
+      "blurPenalty": 0.22,
+      "clumpVisibilityPenalty": 0.22,
+      "faceCollapsePenalty": 0.26,
+      "grayBlobPenalty": 0.18,
+      "lowSaliencyPenalty": 0.12
+    },
+    "weights": {
+      "independentQuality": 0.55,
+      "perceptualQuality": 0.2,
+      "targetSimilarity": 0.25,
+      "visualFailurePenalty": 0.35
+    }
+  },
+  "schemaVersion": 1,
+  "version": "2026-06-30",
+  "visibility": {
+    "minLineInk": 0.0085,
+    "minVisibleInk": 0.004,
+    "minVisualOpacityScale": 0.6,
+    "minVisualWidthScale": 0.8,
+    "policy": "minimum_floor_plus_app_upload_target",
+    "targetLineInk": 0.009,
+    "targetVisibleInk": 0.0055,
+    "targetVisualOpacityScale": 0.7,
+    "targetVisualWidthScale": 0.9
+  }
+}

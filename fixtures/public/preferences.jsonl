@@ -1,0 +1,9 @@
+{"candidate_a": "candidate-0004", "candidate_b": "candidate-0014", "preference_id": "public-pref-001", "reason_flags": [], "reviewer": "reviewer-alias-01", "source_id": "source-01", "winner": "A"}
+{"candidate_a": "candidate-0004", "candidate_b": "candidate-0006", "preference_id": "public-pref-002", "reason_flags": ["better_visibility"], "reviewer": "reviewer-alias-02", "source_id": "source-01", "winner": "both_bad"}
+{"candidate_a": "candidate-0012", "candidate_b": "candidate-0007", "preference_id": "public-pref-003", "reason_flags": [], "reviewer": "reviewer-alias-03", "source_id": "source-01", "winner": "A"}
+{"candidate_a": "candidate-0001", "candidate_b": "candidate-0002", "preference_id": "public-pref-004", "reason_flags": [], "reviewer": "reviewer-alias-01", "source_id": "source-02", "winner": "both_bad"}
+{"candidate_a": "candidate-0016", "candidate_b": "candidate-0017", "preference_id": "public-pref-005", "reason_flags": ["better_visibility"], "reviewer": "reviewer-alias-02", "source_id": "source-02", "winner": "both_bad"}
+{"candidate_a": "candidate-0008", "candidate_b": "candidate-0011", "preference_id": "public-pref-006", "reason_flags": [], "reviewer": "reviewer-alias-03", "source_id": "source-02", "winner": "B"}
+{"candidate_a": "candidate-0005", "candidate_b": "candidate-0015", "preference_id": "public-pref-007", "reason_flags": [], "reviewer": "reviewer-alias-01", "source_id": "source-03", "winner": "both_bad"}
+{"candidate_a": "candidate-0010", "candidate_b": "candidate-0003", "preference_id": "public-pref-008", "reason_flags": [], "reviewer": "reviewer-alias-02", "source_id": "source-03", "winner": "A"}
+{"candidate_a": "candidate-0009", "candidate_b": "candidate-0013", "preference_id": "public-pref-009", "reason_flags": [], "reviewer": "reviewer-alias-03", "source_id": "source-03", "winner": "A"}

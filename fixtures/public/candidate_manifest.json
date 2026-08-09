@@ -1,0 +1,466 @@
+{
+  "candidate_count": 17,
+  "candidates": [
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0001.svg"
+      },
+      "candidate_id": "candidate-0001",
+      "config": {
+        "contrast": 1.04,
+        "finalLineCap": 6000,
+        "gamma": 1.0,
+        "lineInk": 0.0083,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.528081,
+        "visualQualityScore": 0.37181
+      },
+      "run_id": "run-01",
+      "runtime_ms": 9903.5,
+      "score": 0.242635,
+      "source_hash": null,
+      "source_id": "source-02"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0002.svg"
+      },
+      "candidate_id": "candidate-0002",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 6000,
+        "gamma": 1.0,
+        "lineInk": 0.0083,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.529253,
+        "visualQualityScore": 0.372469
+      },
+      "run_id": "run-01",
+      "runtime_ms": 10072.5,
+      "score": 0.24555,
+      "source_hash": null,
+      "source_id": "source-02"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0003.svg"
+      },
+      "candidate_id": "candidate-0003",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.529453,
+        "visualQualityScore": 0.412578
+      },
+      "run_id": "run-01",
+      "runtime_ms": 37276.125,
+      "score": 0.349108,
+      "source_hash": null,
+      "source_id": "source-03"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0004.svg"
+      },
+      "candidate_id": "candidate-0004",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.529252,
+        "visualQualityScore": 0.406794
+      },
+      "run_id": "run-01",
+      "runtime_ms": 37294.5,
+      "score": 0.334953,
+      "source_hash": null,
+      "source_id": "source-01"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0005.svg"
+      },
+      "candidate_id": "candidate-0005",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.529252,
+        "visualQualityScore": 0.406794
+      },
+      "run_id": "run-01",
+      "runtime_ms": 37294.5,
+      "score": 0.334953,
+      "source_hash": null,
+      "source_id": "source-03"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0006.svg"
+      },
+      "candidate_id": "candidate-0006",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 4800,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 4800,
+        "visualOpacityScale": 0.32,
+        "visualWidthScale": 0.6
+      },
+      "line_count": 4800,
+      "metrics": {
+        "ssim": 0.594206,
+        "visualQualityScore": 0.725531
+      },
+      "run_id": "run-02",
+      "runtime_ms": 35977.5,
+      "score": 0.761613,
+      "source_hash": null,
+      "source_id": "source-01"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0007.svg"
+      },
+      "candidate_id": "candidate-0007",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.510528,
+        "visualQualityScore": 0.580606
+      },
+      "run_id": "run-03",
+      "runtime_ms": 3556.2475,
+      "score": 0.653175,
+      "source_hash": null,
+      "source_id": "source-01"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0008.svg"
+      },
+      "candidate_id": "candidate-0008",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.510528,
+        "visualQualityScore": 0.580606
+      },
+      "run_id": "run-03",
+      "runtime_ms": 3556.2475,
+      "score": 0.653175,
+      "source_hash": null,
+      "source_id": "source-02"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0009.svg"
+      },
+      "candidate_id": "candidate-0009",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.510528,
+        "visualQualityScore": 0.580606
+      },
+      "run_id": "run-03",
+      "runtime_ms": 3556.2475,
+      "score": 0.653175,
+      "source_hash": null,
+      "source_id": "source-03"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0010.svg"
+      },
+      "candidate_id": "candidate-0010",
+      "config": {
+        "contrast": null,
+        "finalLineCap": 6000,
+        "gamma": null,
+        "lineInk": null,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.511485,
+        "visualQualityScore": 0.581837
+      },
+      "run_id": "run-04",
+      "runtime_ms": 20699.6875,
+      "score": 0.65736,
+      "source_hash": null,
+      "source_id": "source-03"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0011.svg"
+      },
+      "candidate_id": "candidate-0011",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 5800,
+        "gamma": 1.0,
+        "lineInk": 0.009,
+        "threadCount": 5800,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 5800,
+      "metrics": {
+        "ssim": 0.510351,
+        "visualQualityScore": 0.574407
+      },
+      "run_id": "run-05",
+      "runtime_ms": 3486.7974999999997,
+      "score": 0.452128,
+      "source_hash": null,
+      "source_id": "source-02"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0012.svg"
+      },
+      "candidate_id": "candidate-0012",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 5800,
+        "gamma": 1.0,
+        "lineInk": 0.009,
+        "threadCount": 5800,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 5800,
+      "metrics": {
+        "ssim": 0.510236,
+        "visualQualityScore": 0.574598
+      },
+      "run_id": "run-05",
+      "runtime_ms": 3566.6525,
+      "score": 0.451625,
+      "source_hash": null,
+      "source_id": "source-01"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0013.svg"
+      },
+      "candidate_id": "candidate-0013",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 5800,
+        "gamma": 1.0,
+        "lineInk": 0.009,
+        "threadCount": 5800,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 5800,
+      "metrics": {
+        "ssim": 0.510117,
+        "visualQualityScore": 0.574554
+      },
+      "run_id": "run-05",
+      "runtime_ms": 3575.165,
+      "score": 0.451838,
+      "source_hash": null,
+      "source_id": "source-03"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0014.svg"
+      },
+      "candidate_id": "candidate-0014",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 6000,
+        "gamma": 1.0,
+        "lineInk": 0.0083,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.531132,
+        "visualQualityScore": 0.416627
+      },
+      "run_id": "run-06",
+      "runtime_ms": 8789.5,
+      "score": 0.335264,
+      "source_hash": null,
+      "source_id": "source-01"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0015.svg"
+      },
+      "candidate_id": "candidate-0015",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 6000,
+        "gamma": 1.0,
+        "lineInk": 0.0083,
+        "threadCount": 6000,
+        "visualOpacityScale": 1.0,
+        "visualWidthScale": 1.0
+      },
+      "line_count": 6000,
+      "metrics": {
+        "ssim": 0.531132,
+        "visualQualityScore": 0.416627
+      },
+      "run_id": "run-06",
+      "runtime_ms": 8789.5,
+      "score": 0.335264,
+      "source_hash": null,
+      "source_id": "source-03"
+    },
+    {
+      "app_ready": true,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0016.svg"
+      },
+      "candidate_id": "candidate-0016",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 4800,
+        "gamma": 1.0,
+        "lineInk": 0.0083,
+        "threadCount": 4800,
+        "visualOpacityScale": 0.32,
+        "visualWidthScale": 0.6
+      },
+      "line_count": 4800,
+      "metrics": {
+        "ssim": 0.549923,
+        "visualQualityScore": 0.68829
+      },
+      "run_id": "run-07",
+      "runtime_ms": 11390.75,
+      "score": 0.628485,
+      "source_hash": null,
+      "source_id": "source-02"
+    },
+    {
+      "app_ready": false,
+      "artifact_paths": {
+        "comparison": null,
+        "output": "fixtures/public/artifacts/candidate-0017.svg"
+      },
+      "candidate_id": "candidate-0017",
+      "config": {
+        "contrast": 1.0,
+        "finalLineCap": 4800,
+        "gamma": 1.0,
+        "lineInk": 0.0083,
+        "threadCount": 4800,
+        "visualOpacityScale": null,
+        "visualWidthScale": null
+      },
+      "line_count": 4800,
+      "metrics": {
+        "ssim": 0.533365,
+        "visualQualityScore": null
+      },
+      "run_id": "run-08",
+      "runtime_ms": 22380.6875,
+      "score": 0.381612,
+      "source_hash": null,
+      "source_id": "source-02"
+    }
+  ],
+  "schema_version": 1,
+  "warnings": []
+}

@@ -1,0 +1,11 @@
+{
+  "stringartio_root": "../stringartio",
+  "experiments_path": "../stringartio/experiments",
+  "output_path": "data/processed",
+  "preference_path": "data/preferences/preferences.jsonl",
+  "feature_table_path": "data/processed/features.csv",
+  "review_queue_path": "data/review_queue/review_queue.jsonl",
+  "manifest_path": "data/processed/candidate_manifest.json",
+  "model_path": "data/processed/preference_model.json",
+  "suggestions_path": "data/suggestions/suggested-configs.json"
+}

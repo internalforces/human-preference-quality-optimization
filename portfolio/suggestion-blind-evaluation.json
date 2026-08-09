@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "pending_manual_run",
+  "claim_ready": false,
+  "baseline": null,
+  "suggestion": null,
+  "frozen_artifact_hashes": {},
+  "untouched_source_count": 0,
+  "required_untouched_source_count": 10,
+  "reviewer_count": 0,
+  "required_reviewer_count": 2,
+  "shared_calibration_pair_count": 0,
+  "outcomes": {
+    "baseline_wins": 0,
+    "suggestion_wins": 0,
+    "ties": 0,
+    "both_bad": 0,
+    "suggestion_decisive_win_rate": null,
+    "source_bootstrap_95_ci": null
+  },
+  "reviewer_agreement": {
+    "exact_agreement_rate": null,
+    "chance_corrected_kappa": null
+  },
+  "constraint_failures": [],
+  "note": "No manual generator result or blind preference outcome has been fabricated."
+}

@@ -1,0 +1,712 @@
+{
+  "constraints": {
+    "candidate_count": 9341,
+    "core_failure_counts": {
+      "app_ready": 7080,
+      "runtime_limit_ms": 24,
+      "target_aware_logic": 4942
+    },
+    "core_pass_rate": 0.240338,
+    "core_passing_candidate_count": 2245,
+    "failure_counts": {
+      "app_ready": 7080,
+      "line_ink_floor": 8829,
+      "preference_lab_regenerated_runtime_limit_ms": 16,
+      "runtime_limit_ms": 24,
+      "target_aware_logic": 4942,
+      "visible_ink_floor": 8124,
+      "visual_opacity_scale_floor": 8180,
+      "visual_width_scale_floor": 8136
+    },
+    "line_count_limit": 6000,
+    "note": "Core pass checks app_ready, runtime, line count, and no target-aware logic. Suggestion-anchor pass also checks visibility floors and observed regenerated failures.",
+    "passing_runtime_ms": {
+      "count": 136,
+      "max": 23096.562,
+      "median": 3707.845,
+      "min": 2796.056,
+      "p95": 20699.688
+    },
+    "runtime_limit_ms": 30000,
+    "runtime_ms": {
+      "count": 9341,
+      "max": 48110.625,
+      "median": 6868.25,
+      "min": 184.042,
+      "p95": 10094.188
+    },
+    "suggestion_anchor_pass_rate": 0.014559,
+    "suggestion_anchor_passing_candidate_count": 136
+  },
+  "created_at": "2026-08-09T06:37:12Z",
+  "data": {
+    "candidate_count": 9341,
+    "labeled_source_count": 4,
+    "preference_count": 445,
+    "reviewer_identifier_count": 3,
+    "run_count": 24,
+    "source_count": 7,
+    "usable_preference_count": 445,
+    "winner_counts": {
+      "A": 128,
+      "B": 118,
+      "both_bad": 143,
+      "tie": 56
+    }
+  },
+  "evaluation_readiness": {
+    "agreement_estimable": false,
+    "independent_reviewer_target_met": null,
+    "labeled_source_count": 4,
+    "overlap_pair_count": 0,
+    "recommended_labeled_source_count": 10,
+    "recommended_reviewer_count": 2,
+    "reviewer_identifier_count": 3,
+    "reviewer_identifier_target_met": true,
+    "source_target_met": false,
+    "warnings": [
+      "Only 4 labeled sources are available; collect at least 10 before treating source-level intervals as stable.",
+      "No candidate pair has ratings from multiple reviewer identifiers; reviewer agreement cannot be estimated."
+    ]
+  },
+  "holdout": {
+    "run": {
+      "fold_count": 3,
+      "models": {
+        "full_reason_flags": {
+          "accuracy": 0.833333,
+          "folds": [
+            {
+              "accuracy": 0.428571,
+              "group": "20260622153732",
+              "log_loss": 1.233385,
+              "test_pair_count": 7
+            },
+            {
+              "accuracy": 1.0,
+              "group": "20260628123602",
+              "log_loss": 6.1e-05,
+              "test_pair_count": 64
+            },
+            {
+              "accuracy": 0.421053,
+              "group": "cleanup-overinking-pairfloor",
+              "log_loss": 0.697131,
+              "test_pair_count": 19
+            }
+          ],
+          "log_loss": 0.243145,
+          "macro_accuracy": 0.616541,
+          "macro_log_loss": 0.643526,
+          "test_pair_count": 90
+        },
+        "metric_baseline": {
+          "accuracy": 0.855556,
+          "folds": [
+            {
+              "accuracy": 0.571429,
+              "group": "20260622153732",
+              "log_loss": 0.693529,
+              "test_pair_count": 7
+            },
+            {
+              "accuracy": 1.0,
+              "group": "20260628123602",
+              "log_loss": 0.117416,
+              "test_pair_count": 64
+            },
+            {
+              "accuracy": 0.473684,
+              "group": "cleanup-overinking-pairfloor",
+              "log_loss": 0.693461,
+              "test_pair_count": 19
+            }
+          ],
+          "log_loss": 0.283834,
+          "macro_accuracy": 0.681704,
+          "macro_log_loss": 0.501469,
+          "test_pair_count": 90
+        },
+        "pairwise_only": {
+          "accuracy": 0.844444,
+          "folds": [
+            {
+              "accuracy": 0.571429,
+              "group": "20260622153732",
+              "log_loss": 1.82323,
+              "test_pair_count": 7
+            },
+            {
+              "accuracy": 1.0,
+              "group": "20260628123602",
+              "log_loss": 6.4e-05,
+              "test_pair_count": 64
+            },
+            {
+              "accuracy": 0.421053,
+              "group": "cleanup-overinking-pairfloor",
+              "log_loss": 0.779099,
+              "test_pair_count": 19
+            }
+          ],
+          "log_loss": 0.306329,
+          "macro_accuracy": 0.664161,
+          "macro_log_loss": 0.867464,
+          "test_pair_count": 90
+        },
+        "pairwise_plus_ties_both_bad": {
+          "accuracy": 0.833333,
+          "folds": [
+            {
+              "accuracy": 0.428571,
+              "group": "20260622153732",
+              "log_loss": 1.347052,
+              "test_pair_count": 7
+            },
+            {
+              "accuracy": 1.0,
+              "group": "20260628123602",
+              "log_loss": 2.8e-05,
+              "test_pair_count": 64
+            },
+            {
+              "accuracy": 0.421053,
+              "group": "cleanup-overinking-pairfloor",
+              "log_loss": 0.696487,
+              "test_pair_count": 19
+            }
+          ],
+          "log_loss": 0.251827,
+          "macro_accuracy": 0.616541,
+          "macro_log_loss": 0.681189,
+          "test_pair_count": 90
+        }
+      }
+    },
+    "source": {
+      "fold_count": 4,
+      "models": {
+        "full_reason_flags": {
+          "accuracy": 0.731707,
+          "folds": [
+            {
+              "accuracy": 0.705128,
+              "group": "pair-1",
+              "log_loss": 0.845147,
+              "test_pair_count": 78
+            },
+            {
+              "accuracy": 0.681818,
+              "group": "pair-2",
+              "log_loss": 0.605946,
+              "test_pair_count": 66
+            },
+            {
+              "accuracy": 0.815789,
+              "group": "pair-3",
+              "log_loss": 0.792849,
+              "test_pair_count": 38
+            },
+            {
+              "accuracy": 0.765625,
+              "group": "pair-4",
+              "log_loss": 0.594964,
+              "test_pair_count": 64
+            }
+          ],
+          "log_loss": 0.707804,
+          "macro_accuracy": 0.74209,
+          "macro_log_loss": 0.709727,
+          "source_bootstrap_95_ci": {
+            "accuracy": {
+              "lower": 0.688406,
+              "upper": 0.784314
+            },
+            "iterations": 2000,
+            "log_loss": {
+              "lower": 0.60047,
+              "upper": 0.828015
+            },
+            "seed": 20260809,
+            "source_count": 4,
+            "unit": "source_id"
+          },
+          "test_pair_count": 246
+        },
+        "metric_baseline": {
+          "accuracy": 0.686992,
+          "folds": [
+            {
+              "accuracy": 0.653846,
+              "group": "pair-1",
+              "log_loss": 0.633405,
+              "test_pair_count": 78
+            },
+            {
+              "accuracy": 0.560606,
+              "group": "pair-2",
+              "log_loss": 0.770049,
+              "test_pair_count": 66
+            },
+            {
+              "accuracy": 0.815789,
+              "group": "pair-3",
+              "log_loss": 0.448562,
+              "test_pair_count": 38
+            },
+            {
+              "accuracy": 0.78125,
+              "group": "pair-4",
+              "log_loss": 0.567117,
+              "test_pair_count": 64
+            }
+          ],
+          "log_loss": 0.624267,
+          "macro_accuracy": 0.702873,
+          "macro_log_loss": 0.604783,
+          "source_bootstrap_95_ci": {
+            "accuracy": {
+              "lower": 0.586957,
+              "upper": 0.794118
+            },
+            "iterations": 2000,
+            "log_loss": {
+              "lower": 0.522949,
+              "upper": 0.720478
+            },
+            "seed": 20260809,
+            "source_count": 4,
+            "unit": "source_id"
+          },
+          "test_pair_count": 246
+        },
+        "pairwise_only": {
+          "accuracy": 0.674797,
+          "folds": [
+            {
+              "accuracy": 0.705128,
+              "group": "pair-1",
+              "log_loss": 1.311561,
+              "test_pair_count": 78
+            },
+            {
+              "accuracy": 0.530303,
+              "group": "pair-2",
+              "log_loss": 2.123696,
+              "test_pair_count": 66
+            },
+            {
+              "accuracy": 0.815789,
+              "group": "pair-3",
+              "log_loss": 0.732194,
+              "test_pair_count": 38
+            },
+            {
+              "accuracy": 0.703125,
+              "group": "pair-4",
+              "log_loss": 0.718336,
+              "test_pair_count": 64
+            }
+          ],
+          "log_loss": 1.28562,
+          "macro_accuracy": 0.688586,
+          "macro_log_loss": 1.221447,
+          "source_bootstrap_95_ci": {
+            "accuracy": {
+              "lower": 0.576271,
+              "upper": 0.770833
+            },
+            "iterations": 2000,
+            "log_loss": {
+              "lower": 0.723499,
+              "upper": 1.89418
+            },
+            "seed": 20260809,
+            "source_count": 4,
+            "unit": "source_id"
+          },
+          "test_pair_count": 246
+        },
+        "pairwise_plus_ties_both_bad": {
+          "accuracy": 0.650407,
+          "folds": [
+            {
+              "accuracy": 0.692308,
+              "group": "pair-1",
+              "log_loss": 1.006577,
+              "test_pair_count": 78
+            },
+            {
+              "accuracy": 0.545455,
+              "group": "pair-2",
+              "log_loss": 1.698344,
+              "test_pair_count": 66
+            },
+            {
+              "accuracy": 0.815789,
+              "group": "pair-3",
+              "log_loss": 0.599605,
+              "test_pair_count": 38
+            },
+            {
+              "accuracy": 0.609375,
+              "group": "pair-4",
+              "log_loss": 1.146064,
+              "test_pair_count": 64
+            }
+          ],
+          "log_loss": 1.165597,
+          "macro_accuracy": 0.665732,
+          "macro_log_loss": 1.112648,
+          "source_bootstrap_95_ci": {
+            "accuracy": {
+              "lower": 0.576923,
+              "upper": 0.741573
+            },
+            "iterations": 2000,
+            "log_loss": {
+              "lower": 0.796084,
+              "upper": 1.521429
+            },
+            "seed": 20260809,
+            "source_count": 4,
+            "unit": "source_id"
+          },
+          "test_pair_count": 246
+        }
+      }
+    }
+  },
+  "human_outcomes": {
+    "by_source": {
+      "pair-1": {
+        "a_win_rate_decisive": 0.525641,
+        "both_bad_rate": 0.317829,
+        "counts": {
+          "A": 41,
+          "B": 37,
+          "both_bad": 41,
+          "tie": 10
+        },
+        "review_count": 129
+      },
+      "pair-2": {
+        "a_win_rate_decisive": 0.469697,
+        "both_bad_rate": 0.277311,
+        "counts": {
+          "A": 31,
+          "B": 35,
+          "both_bad": 33,
+          "tie": 20
+        },
+        "review_count": 119
+      },
+      "pair-3": {
+        "a_win_rate_decisive": 0.684211,
+        "both_bad_rate": 0.534653,
+        "counts": {
+          "A": 26,
+          "B": 12,
+          "both_bad": 54,
+          "tie": 9
+        },
+        "review_count": 101
+      },
+      "pair-4": {
+        "a_win_rate_decisive": 0.46875,
+        "both_bad_rate": 0.15625,
+        "counts": {
+          "A": 30,
+          "B": 34,
+          "both_bad": 15,
+          "tie": 17
+        },
+        "review_count": 96
+      }
+    },
+    "cross_run_matchups": [
+      {
+        "both_bad_rate": 0.25,
+        "counts": {
+          "both_bad": 11,
+          "left_win": 14,
+          "right_win": 15,
+          "tie": 4
+        },
+        "left_run": "20260628123602",
+        "left_win_rate_decisive": 0.482759,
+        "review_count": 44,
+        "right_run": "20260628142912",
+        "right_win_rate_decisive": 0.517241
+      },
+      {
+        "both_bad_rate": 0.159091,
+        "counts": {
+          "both_bad": 7,
+          "left_win": 11,
+          "right_win": 19,
+          "tie": 7
+        },
+        "left_run": "20260628123602",
+        "left_win_rate_decisive": 0.366667,
+        "review_count": 44,
+        "right_run": "20260628170442",
+        "right_win_rate_decisive": 0.633333
+      },
+      {
+        "both_bad_rate": 0.227273,
+        "counts": {
+          "both_bad": 10,
+          "left_win": 20,
+          "right_win": 8,
+          "tie": 6
+        },
+        "left_run": "20260628123602",
+        "left_win_rate_decisive": 0.714286,
+        "review_count": 44,
+        "right_run": "20260629115003",
+        "right_win_rate_decisive": 0.285714
+      },
+      {
+        "both_bad_rate": 1.0,
+        "counts": {
+          "both_bad": 28
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": null,
+        "review_count": 28,
+        "right_run": "experiments",
+        "right_win_rate_decisive": null
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "left_win": 11,
+          "right_win": 13
+        },
+        "left_run": "20260628123602",
+        "left_win_rate_decisive": 0.458333,
+        "review_count": 24,
+        "right_run": "20260630144957",
+        "right_win_rate_decisive": 0.541667
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "left_win": 14,
+          "right_win": 6
+        },
+        "left_run": "20260628142912",
+        "left_win_rate_decisive": 0.7,
+        "review_count": 20,
+        "right_run": "20260630144957",
+        "right_win_rate_decisive": 0.3
+      },
+      {
+        "both_bad_rate": 0.263158,
+        "counts": {
+          "both_bad": 5,
+          "left_win": 7,
+          "right_win": 1,
+          "tie": 6
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": 0.875,
+        "review_count": 19,
+        "right_run": "cleanup-overinking-pairfloor",
+        "right_win_rate_decisive": 0.125
+      },
+      {
+        "both_bad_rate": 0.428571,
+        "counts": {
+          "both_bad": 6,
+          "left_win": 2,
+          "right_win": 2,
+          "tie": 4
+        },
+        "left_run": "cleanup-overinking-pairfloor",
+        "left_win_rate_decisive": 0.5,
+        "review_count": 14,
+        "right_run": "source-prior-pair2-real",
+        "right_win_rate_decisive": 0.5
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "right_win": 3
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": 0.0,
+        "review_count": 3,
+        "right_run": "20260628142912",
+        "right_win_rate_decisive": 1.0
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "left_win": 3
+        },
+        "left_run": "20260624080512",
+        "left_win_rate_decisive": 1.0,
+        "review_count": 3,
+        "right_run": "cleanup-overinking-pairfloor",
+        "right_win_rate_decisive": 0.0
+      },
+      {
+        "both_bad_rate": 0.333333,
+        "counts": {
+          "both_bad": 1,
+          "left_win": 2
+        },
+        "left_run": "cleanup-overinking-pairfloor",
+        "left_win_rate_decisive": 1.0,
+        "review_count": 3,
+        "right_run": "experiments",
+        "right_win_rate_decisive": 0.0
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "right_win": 2
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": 0.0,
+        "review_count": 2,
+        "right_run": "20260628170442",
+        "right_win_rate_decisive": 1.0
+      },
+      {
+        "both_bad_rate": 1.0,
+        "counts": {
+          "both_bad": 2
+        },
+        "left_run": "codex-synthesis-validation",
+        "left_win_rate_decisive": null,
+        "review_count": 2,
+        "right_run": "experiments",
+        "right_win_rate_decisive": null
+      },
+      {
+        "both_bad_rate": 1.0,
+        "counts": {
+          "both_bad": 2
+        },
+        "left_run": "experiments",
+        "left_win_rate_decisive": null,
+        "review_count": 2,
+        "right_run": "visual-brightness-pairfloor",
+        "right_win_rate_decisive": null
+      },
+      {
+        "both_bad_rate": 1.0,
+        "counts": {
+          "both_bad": 1
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": null,
+        "review_count": 1,
+        "right_run": "20260622205904",
+        "right_win_rate_decisive": null
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "right_win": 1
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": 0.0,
+        "review_count": 1,
+        "right_run": "20260628203605",
+        "right_win_rate_decisive": 1.0
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "tie": 1
+        },
+        "left_run": "20260622153732",
+        "left_win_rate_decisive": null,
+        "review_count": 1,
+        "right_run": "source-prior-pair2-real",
+        "right_win_rate_decisive": null
+      },
+      {
+        "both_bad_rate": 0.0,
+        "counts": {
+          "tie": 1
+        },
+        "left_run": "experiments",
+        "left_win_rate_decisive": null,
+        "review_count": 1,
+        "right_run": "source-prior-pair2-real",
+        "right_win_rate_decisive": null
+      }
+    ],
+    "overall": {
+      "a_win_rate_decisive": 0.520325,
+      "both_bad_rate": 0.321348,
+      "counts": {
+        "A": 128,
+        "B": 118,
+        "both_bad": 143,
+        "tie": 56
+      },
+      "review_count": 445,
+      "source_bootstrap_95_ci": {
+        "a_win_rate_decisive": {
+          "lower": 0.469231,
+          "upper": 0.606742
+        },
+        "both_bad_rate": {
+          "lower": 0.20587,
+          "upper": 0.462085
+        },
+        "iterations": 2000,
+        "seed": 20260809,
+        "source_count": 4,
+        "unit": "source_id"
+      }
+    }
+  },
+  "methodology": {
+    "metric_baseline": "candidate score, then visualQualityScore, targetScore, or SSIM; probability is sigmoid(8 * score_difference)",
+    "normalization": "training-candidate means and standard deviations only",
+    "primary_metric": "pairwise_accuracy_on_A_or_B_labels",
+    "reviewer_agreement": "pooled exact agreement and chance-corrected kappa on repeated unordered candidate pairs after canonicalizing A/B orientation",
+    "run_holdout": "leave one run_id out; training excludes every comparison touching the run, and testing uses same-run A/B comparisons only",
+    "secondary_metric": "binary_log_loss",
+    "source_bootstrap_ci": "95% percentile interval from deterministic resampling of complete source folds",
+    "source_holdout": "leave one complete source_id out",
+    "tie_and_both_bad_in_test_metric": false
+  },
+  "reviewer_agreement": {
+    "agreement_count": 0,
+    "chance_corrected_kappa": null,
+    "exact_agreement_rate": null,
+    "expected_agreement_rate": null,
+    "identity_note": "Reviewer field values are treated as identifiers; the collection protocol must separately confirm that they represent independent people.",
+    "method": "pooled pairwise agreement on repeated unordered candidate pairs",
+    "outcome_categories": [
+      "left",
+      "right",
+      "tie",
+      "both_bad"
+    ],
+    "overlap_pair_count": 0,
+    "rating_pair_count": 0,
+    "reviewer_identifier_count": 3
+  },
+  "schema_version": 1,
+  "warnings": [
+    {
+      "level": "warning",
+      "message": "Only 4 labeled sources are available; collect at least 10 before treating source-level intervals as stable.",
+      "path": null
+    },
+    {
+      "level": "warning",
+      "message": "No candidate pair has ratings from multiple reviewer identifiers; reviewer agreement cannot be estimated.",
+      "path": null
+    }
+  ]
+}

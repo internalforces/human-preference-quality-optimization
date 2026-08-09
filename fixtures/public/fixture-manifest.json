@@ -1,0 +1,26 @@
+{
+  "anonymized_fields": [
+    "preference_id",
+    "source_id",
+    "candidate_id",
+    "run_id",
+    "reviewer"
+  ],
+  "candidate_count": 17,
+  "independent_reviewer_identity_confirmed": false,
+  "labeled_source_count": 3,
+  "preference_count": 9,
+  "provenance": "deterministic anonymized subset of real human review records",
+  "public_artifact_policy": "Generated SVG outputs only; original and diagnostic source images are excluded",
+  "public_asset_license": "Source-photo terms are listed in portfolio/assets/ATTRIBUTION.md",
+  "removed_fields": [
+    "timestamp",
+    "notes",
+    "private source/comparison artifact paths",
+    "source hashes"
+  ],
+  "repeated_pair_count": 0,
+  "reviewer_alias_count": 3,
+  "schema_version": 1,
+  "selection": "one record per public source and reviewer-field alias"
+}
