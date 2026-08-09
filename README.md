@@ -182,9 +182,10 @@ python3 scripts/build_gallery_assets.py
 
 ## 프로젝트 경계와 구현 범위
 
-- [StringArtio](https://github.com/internalforces/stringartio)는 전처리, JS/Rust
-  생성기, 실험 실행, 실제 render/export, app-ready 판정과 기본값 승격을 소유합니다.
-- [StringArtio Preference Lab](https://github.com/internalforces/stringartio-preference-lab)은
+- [StringArtio product](https://stringartio.vercel.app)는 전처리, JS/Rust 생성기,
+  실험 실행, 실제 render/export, app-ready 판정과 기본값 승격을 소유합니다.
+  본체 source repository는 현재 비공개입니다.
+- [StringArtio Preference Lab 공개 미러](https://github.com/internalforces/human-preference-quality-optimization)는
   read-only 수집, blind review, append-only preference, 모델 학습·holdout 평가,
   제약 기반 `not_executed` suggestion 생성을 소유합니다.
 - 이 포트폴리오 범위에서 직접 설계·구현한 부분은 정규화 schema, review queue,
