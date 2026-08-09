@@ -59,6 +59,13 @@ class PipelineTest(unittest.TestCase):
             self.assertTrue(
                 all(item["status"] == "not_executed" for item in suggestions["suggestions"])
             )
+            self.assertTrue(
+                all(
+                    value is not None
+                    for item in suggestions["suggestions"]
+                    for value in item["config"].values()
+                )
+            )
             self.assertEqual(
                 suggestions["constraints"]["generation_quality_contract"]["source_path"],
                 "docs/string-art/generation-quality-contract.json",

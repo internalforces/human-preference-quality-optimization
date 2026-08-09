@@ -205,7 +205,9 @@ def suggest_configurations(
     while ranked and len(suggestions) < limit and attempts < limit * 40:
         attempts += 1
         base = ranked[(attempts - 1) % len(ranked)]
-        proposed = sanitize_target_aware_config(perturb_config(base.config, observed_ranges, rng))
+        proposed = compact_suggestion_config(
+            sanitize_target_aware_config(perturb_config(base.config, observed_ranges, rng))
+        )
         proposed = enforce_visibility_floors(
             proposed,
             min_visual_opacity_scale,
@@ -369,6 +371,14 @@ def satisfies_constraints(
         min_line_ink,
         min_visible_ink,
     )
+
+
+def compact_suggestion_config(config: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        key: value
+        for key, value in config.items()
+        if value is not None
+    }
 
 
 def candidate_constraint_failures(
