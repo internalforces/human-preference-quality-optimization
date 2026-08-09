@@ -59,7 +59,7 @@ stringart-lab demo
 ```
 
 `fixtures/public/`에는 실제 human review에서 추출·익명화한 preference 9건과
-candidate feature 17행, 최소 manifest 및 공개 가능한 generated SVG가 있습니다.
+candidate feature 17행, 최소 manifest 및 공개 가능한 256px render preview가 있습니다.
 개인 경로, 원본·diagnostic source image 경로, source hash, timestamp, 메모는
 포함하지 않습니다. 이 fixture는 3개 source이며 10-source 성능 주장의 근거가
 아니라 queue→model→suggestion→evaluation 축소 경로 재현용입니다. 결과는

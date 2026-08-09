@@ -5,7 +5,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0001.svg"
+        "output": "fixtures/public/artifacts/candidate-0001.png"
       },
       "candidate_id": "candidate-0001",
       "config": {
@@ -32,7 +32,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0002.svg"
+        "output": "fixtures/public/artifacts/candidate-0002.png"
       },
       "candidate_id": "candidate-0002",
       "config": {
@@ -59,7 +59,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0003.svg"
+        "output": "fixtures/public/artifacts/candidate-0003.png"
       },
       "candidate_id": "candidate-0003",
       "config": {
@@ -86,7 +86,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0004.svg"
+        "output": "fixtures/public/artifacts/candidate-0004.png"
       },
       "candidate_id": "candidate-0004",
       "config": {
@@ -113,7 +113,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0005.svg"
+        "output": "fixtures/public/artifacts/candidate-0005.png"
       },
       "candidate_id": "candidate-0005",
       "config": {
@@ -140,7 +140,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0006.svg"
+        "output": "fixtures/public/artifacts/candidate-0006.png"
       },
       "candidate_id": "candidate-0006",
       "config": {
@@ -167,7 +167,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0007.svg"
+        "output": "fixtures/public/artifacts/candidate-0007.png"
       },
       "candidate_id": "candidate-0007",
       "config": {
@@ -194,7 +194,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0008.svg"
+        "output": "fixtures/public/artifacts/candidate-0008.png"
       },
       "candidate_id": "candidate-0008",
       "config": {
@@ -221,7 +221,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0009.svg"
+        "output": "fixtures/public/artifacts/candidate-0009.png"
       },
       "candidate_id": "candidate-0009",
       "config": {
@@ -248,7 +248,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0010.svg"
+        "output": "fixtures/public/artifacts/candidate-0010.png"
       },
       "candidate_id": "candidate-0010",
       "config": {
@@ -275,7 +275,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0011.svg"
+        "output": "fixtures/public/artifacts/candidate-0011.png"
       },
       "candidate_id": "candidate-0011",
       "config": {
@@ -302,7 +302,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0012.svg"
+        "output": "fixtures/public/artifacts/candidate-0012.png"
       },
       "candidate_id": "candidate-0012",
       "config": {
@@ -329,7 +329,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0013.svg"
+        "output": "fixtures/public/artifacts/candidate-0013.png"
       },
       "candidate_id": "candidate-0013",
       "config": {
@@ -356,7 +356,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0014.svg"
+        "output": "fixtures/public/artifacts/candidate-0014.png"
       },
       "candidate_id": "candidate-0014",
       "config": {
@@ -383,7 +383,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0015.svg"
+        "output": "fixtures/public/artifacts/candidate-0015.png"
       },
       "candidate_id": "candidate-0015",
       "config": {
@@ -410,7 +410,7 @@
       "app_ready": true,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0016.svg"
+        "output": "fixtures/public/artifacts/candidate-0016.png"
       },
       "candidate_id": "candidate-0016",
       "config": {
@@ -437,7 +437,7 @@
       "app_ready": false,
       "artifact_paths": {
         "comparison": null,
-        "output": "fixtures/public/artifacts/candidate-0017.svg"
+        "output": "fixtures/public/artifacts/candidate-0017.png"
       },
       "candidate_id": "candidate-0017",
       "config": {

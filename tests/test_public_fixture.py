@@ -15,6 +15,9 @@ class PublicFixtureTests(unittest.TestCase):
         with (root / "features.csv").open(newline="", encoding="utf-8") as handle:
             features = list(csv.DictReader(handle))
         manifest = json.loads((root / "fixture-manifest.json").read_text(encoding="utf-8"))
+        candidates = json.loads(
+            (root / "candidate_manifest.json").read_text(encoding="utf-8")
+        )["candidates"]
 
         candidate_ids = {row["candidate_id"] for row in features}
         self.assertEqual(len(preferences), 9)
@@ -22,6 +25,13 @@ class PublicFixtureTests(unittest.TestCase):
         self.assertEqual(len({row["source_id"] for row in preferences}), 3)
         self.assertFalse(manifest["independent_reviewer_identity_confirmed"])
         self.assertEqual(manifest["repeated_pair_count"], 0)
+        self.assertTrue(
+            all(
+                candidate["artifact_paths"]["output"].endswith(".png")
+                and (root.parents[1] / candidate["artifact_paths"]["output"]).is_file()
+                for candidate in candidates
+            )
+        )
         self.assertTrue(
             all(
                 row["candidate_a"] in candidate_ids and row["candidate_b"] in candidate_ids

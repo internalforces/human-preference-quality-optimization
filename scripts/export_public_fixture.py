@@ -5,6 +5,7 @@ import argparse
 import csv
 import json
 import shutil
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
@@ -63,7 +64,13 @@ def main():
     selected = balanced_selection(eligible, args.per_source_reviewer, args.max_sources)
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
-    export(selected, feature_by_candidate, output)
+    export(
+        selected,
+        feature_by_candidate,
+        output,
+        args.per_source_reviewer,
+        args.max_sources,
+    )
     print(
         json.dumps(
             {
@@ -107,7 +114,7 @@ def balanced_selection(rows, per_source_reviewer, max_sources):
     )
 
 
-def export(preferences, feature_by_candidate, output):
+def export(preferences, feature_by_candidate, output, per_source_reviewer, max_sources):
     source_map = sequential_map(sorted({row["source_id"] for row in preferences}), "source")
     reviewer_map = sequential_map(
         sorted({str(row.get("reviewer") or "unassigned") for row in preferences}),
@@ -179,7 +186,10 @@ def export(preferences, feature_by_candidate, output):
         {
             "schema_version": 1,
             "provenance": "deterministic anonymized subset of real human review records",
-            "selection": "up to four records per source and reviewer-field alias",
+            "selection": (
+                f"up to {per_source_reviewer} record(s) per reviewer-field alias "
+                f"across the first {max_sources} sorted sources"
+            ),
             "anonymized_fields": [
                 "preference_id",
                 "source_id",
@@ -194,7 +204,7 @@ def export(preferences, feature_by_candidate, output):
                 "source hashes",
             ],
             "public_artifact_policy": (
-                "Generated SVG outputs only; original and diagnostic source images are excluded"
+                "256px previews rendered from generated SVG outputs; full SVG, original, and diagnostic source images are excluded"
             ),
             "public_asset_license": "Source-photo terms are listed in portfolio/assets/ATTRIBUTION.md",
             "preference_count": len(public_preferences),
@@ -213,8 +223,29 @@ def copy_public_artifact(raw_path, artifact_dir, candidate_id):
         source = Path.cwd() / source
     if not source.is_file() or source.suffix.lower() != ".svg":
         raise FileNotFoundError(f"Missing public SVG artifact for {candidate_id}: {source}")
-    destination = artifact_dir / f"{candidate_id}.svg"
-    shutil.copyfile(source, destination)
+    destination = artifact_dir / f"{candidate_id}.png"
+    sips = shutil.which("sips")
+    imagemagick = shutil.which("magick")
+    if sips:
+        subprocess.run(
+            [sips, "-s", "format", "png", str(source), "--out", str(destination)],
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        subprocess.run(
+            [sips, "-Z", "256", str(destination)],
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+    elif imagemagick:
+        subprocess.run(
+            [imagemagick, str(source), "-resize", "256x256", str(destination)],
+            check=True,
+        )
+    else:
+        raise RuntimeError(
+            "Public preview export requires macOS sips or ImageMagick's magick command."
+        )
     return f"fixtures/public/artifacts/{destination.name}"
 
 

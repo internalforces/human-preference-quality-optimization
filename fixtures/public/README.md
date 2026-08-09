@@ -13,9 +13,9 @@ stringart-lab demo
 ```
 
 The generated files are written to `examples/demo-output/`. The fixture includes
-17 generated SVG outputs derived from the three open-license sources described
+17 downsampled previews rendered from generated SVG outputs derived from the three open-license sources described
 in [`portfolio/assets/ATTRIBUTION.md`](../../portfolio/assets/ATTRIBUTION.md).
-It does not include the source photographs or diagnostic comparison images.
+It does not include full SVGs, source photographs, or diagnostic comparison images.
 
 The three `reviewer-alias-*` values preserve distinct values that appeared in
 the original `reviewer` field. They are not evidence of three independent human

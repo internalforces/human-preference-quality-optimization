@@ -11,7 +11,7 @@
   "labeled_source_count": 3,
   "preference_count": 9,
   "provenance": "deterministic anonymized subset of real human review records",
-  "public_artifact_policy": "Generated SVG outputs only; original and diagnostic source images are excluded",
+  "public_artifact_policy": "256px previews rendered from generated SVG outputs; full SVG, original, and diagnostic source images are excluded",
   "public_asset_license": "Source-photo terms are listed in portfolio/assets/ATTRIBUTION.md",
   "removed_fields": [
     "timestamp",
@@ -22,5 +22,5 @@
   "repeated_pair_count": 0,
   "reviewer_alias_count": 3,
   "schema_version": 1,
-  "selection": "one record per public source and reviewer-field alias"
+  "selection": "up to 1 record(s) per reviewer-field alias across the first 3 sorted sources"
 }

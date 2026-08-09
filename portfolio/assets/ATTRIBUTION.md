@@ -14,7 +14,7 @@ corresponding source photographs.
 
 Comparison assets were produced by StringArtio run `20260717132239`. The blind
 example contains only the two rendered candidates and neutral A/B labels.
-The anonymized generated SVGs in `fixtures/public/artifacts/` are derived from
-the open-license source set attributed above; original photographs are not
-redistributed in the fixture. Their upstream attribution and share-alike terms
-remain in effect where applicable.
+The anonymized 256px previews in `fixtures/public/artifacts/` are rendered from
+generated SVGs derived from the open-license source set attributed above; full
+SVGs and original photographs are not redistributed in the fixture. Their
+upstream attribution and share-alike terms remain in effect where applicable.
