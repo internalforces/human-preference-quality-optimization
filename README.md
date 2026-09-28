@@ -13,12 +13,14 @@ hard constraint를 결합해 다음 실험 후보를 제안합니다. Generator�
 
 ## 시연
 
-아래는 같은 128×128 thread render를 크게 확대한 비교입니다. 빨간 상자는 모든
-source에 동일하게 적용한 중앙 crop이며, difference 이미지는 절대 픽셀 차이를
-12배 밝게 표시했습니다. 생성형 보정은 사용하지 않았습니다.
+원본 사진과 같은 source에서 생성한 128×128 thread render를 함께 비교합니다.
+Baseline보다 Track B에서 눈·코·입의 구조가 더 분명하게 남는 사례입니다. 작은
+README 화면에서도 실선을 확인할 수 있도록 표시 대비만 5배 높였으며, 원본 render의
+형상이나 평가 데이터에는 손대지 않았습니다.
 
-![Baseline and Track B render with fixed zoom and pixel difference](portfolio/assets/pair-2-detail-diff.png)
+![Original portrait with Baseline and Track B thread renders](portfolio/assets/pair-2-source-render-comparison.png)
 
+[고정 crop과 픽셀 차이 상세 보기](portfolio/assets/pair-2-detail-diff.png) ·
 [4개 source의 대형 비교 갤러리](docs/case-study.md#public-beforeafter-gallery) ·
 [blind review 화면](portfolio/assets/blind-review-example.png)
 

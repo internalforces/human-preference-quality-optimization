@@ -109,26 +109,35 @@ for cat (0.551531→0.559426), +5.86% for portrait (0.519201→0.549611),
 +1.40% for complex background (0.557362→0.565161), and +13.81% for backlight
 (0.396883→0.451710). These metric gains still require blind review.
 
-Each panel enlarges the rendered thread output, marks the same fixed center crop,
-shows that crop without smoothing, and includes an absolute pixel difference
-image brightened 12×. The raw mean absolute difference is printed in each panel.
-No generated detail or subjective enhancement was added.
+Each panel places the original source beside the Baseline and Track B thread
+renders. Display contrast is increased 5× so the 128×128 thread geometry remains
+legible at documentation scale; the source pixels, render geometry, and evaluation
+data are unchanged. The linked detail views retain the fixed center crop and the
+12× absolute pixel difference. No generated detail was added.
 
 ### Cat
 
-![Cat baseline, Track B, fixed zoom, and difference](../portfolio/assets/pair-1-detail-diff.png)
+![Original cat with Baseline and Track B thread renders](../portfolio/assets/pair-1-source-render-comparison.png)
+
+[Fixed crop and pixel difference](../portfolio/assets/pair-1-detail-diff.png)
 
 ### Portrait
 
-![Portrait baseline, Track B, fixed zoom, and difference](../portfolio/assets/pair-2-detail-diff.png)
+![Original portrait with Baseline and Track B thread renders](../portfolio/assets/pair-2-source-render-comparison.png)
+
+[Fixed crop and pixel difference](../portfolio/assets/pair-2-detail-diff.png)
 
 ### Complex background
 
-![Complex-background baseline, Track B, fixed zoom, and difference](../portfolio/assets/pair-3-detail-diff.png)
+![Original complex-background source with Baseline and Track B thread renders](../portfolio/assets/pair-3-source-render-comparison.png)
+
+[Fixed crop and pixel difference](../portfolio/assets/pair-3-detail-diff.png)
 
 ### Backlight
 
-![Backlight baseline, Track B, fixed zoom, and difference](../portfolio/assets/pair-7-detail-diff.png)
+![Original backlight source with Baseline and Track B thread renders](../portfolio/assets/pair-7-source-render-comparison.png)
+
+[Fixed crop and pixel difference](../portfolio/assets/pair-7-detail-diff.png)
 
 Blind review example — candidate identity and diagnostics are hidden until the
 reviewer chooses A, B, tie, or `both_bad`:
