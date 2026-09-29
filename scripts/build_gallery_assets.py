@@ -53,7 +53,7 @@ def build_source_render_panel(pair_id, source, before, after):
 
     draw.text(
         (70, 48),
-        "Human preference reveals what metrics miss",
+        "Automatic metric gains still need human review",
         fill=title_color,
         font=font(42, bold=True),
     )
@@ -65,26 +65,31 @@ def build_source_render_panel(pair_id, source, before, after):
     )
 
     cards = (
-        (60, 280, "SOURCE", source, 1),
+        (60, 280, "PREPARED SOURCE", source, 1),
         (390, 430, "BASELINE", before, 5),
         (860, 430, "TRACK B", after, 5),
     )
     for x, width, label, image, ink_scale in cards:
         draw.rounded_rectangle((x, 170, x + width, 670), radius=26, fill=card)
         draw.text((x + 40, 205), label, fill=accent, font=font(20, bold=True))
-        size = 220 if label == "SOURCE" else 320
+        size = 220 if label == "PREPARED SOURCE" else 320
         image_x = x + (width - size) // 2
-        image_y = 275 if label == "SOURCE" else 265
-        displayed = image if label == "SOURCE" else darken_ink(image, ink_scale)
+        image_y = 275 if label == "PREPARED SOURCE" else 265
+        displayed = image if label == "PREPARED SOURCE" else darken_ink(image, ink_scale)
         paste_circle(canvas, displayed, (image_x, image_y), size)
-        if label == "SOURCE":
+        if label == "PREPARED SOURCE":
             draw.text(
                 (x + 38, 535),
-                "Open-license source",
+                "Open-license source crop",
                 fill=title_color,
-                font=font(22, bold=True),
+                font=font(20, bold=True),
             )
-            draw.text((x + 38, 575), "same source · blind review", fill=muted, font=font(18))
+            draw.text(
+                (x + 38, 575),
+                "same source · blind review pending",
+                fill=muted,
+                font=font(18),
+            )
         else:
             draw.text(
                 (x + 72, 610),

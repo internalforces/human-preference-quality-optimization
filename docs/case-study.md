@@ -109,33 +109,35 @@ for cat (0.551531→0.559426), +5.86% for portrait (0.519201→0.549611),
 +1.40% for complex background (0.557362→0.565161), and +13.81% for backlight
 (0.396883→0.451710). These metric gains still require blind review.
 
-Each panel places the original source beside the Baseline and Track B thread
-renders. Display contrast is increased 5× so the 128×128 thread geometry remains
-legible at documentation scale; the source pixels, render geometry, and evaluation
-data are unchanged. The linked detail views retain the fixed center crop and the
-12× absolute pixel difference. No generated detail was added.
+Each panel places a prepared source crop extracted from the diagnostic image
+beside the Baseline and Track B thread renders. The crop is resized and circularly
+masked for this layout. Render display contrast is increased 5× so the 128×128
+thread geometry remains legible at documentation scale; render geometry and
+evaluation data are unchanged. The linked detail views retain the fixed center
+crop and the 12× absolute pixel difference. No generated detail was added, and
+blind review of these comparisons is still pending.
 
 ### Cat
 
-![Original cat with Baseline and Track B thread renders](../portfolio/assets/pair-1-source-render-comparison.png)
+![Prepared cat source crop with Baseline and Track B thread renders; blind review pending](../portfolio/assets/pair-1-source-render-comparison.png)
 
 [Fixed crop and pixel difference](../portfolio/assets/pair-1-detail-diff.png)
 
 ### Portrait
 
-![Original portrait with Baseline and Track B thread renders](../portfolio/assets/pair-2-source-render-comparison.png)
+![Prepared portrait source crop with Baseline and Track B thread renders; blind review pending](../portfolio/assets/pair-2-source-render-comparison.png)
 
 [Fixed crop and pixel difference](../portfolio/assets/pair-2-detail-diff.png)
 
 ### Complex background
 
-![Original complex-background source with Baseline and Track B thread renders](../portfolio/assets/pair-3-source-render-comparison.png)
+![Prepared complex-background source crop with Baseline and Track B thread renders; blind review pending](../portfolio/assets/pair-3-source-render-comparison.png)
 
 [Fixed crop and pixel difference](../portfolio/assets/pair-3-detail-diff.png)
 
 ### Backlight
 
-![Original backlight source with Baseline and Track B thread renders](../portfolio/assets/pair-7-source-render-comparison.png)
+![Prepared backlight source crop with Baseline and Track B thread renders; blind review pending](../portfolio/assets/pair-7-source-render-comparison.png)
 
 [Fixed crop and pixel difference](../portfolio/assets/pair-7-detail-diff.png)
 
