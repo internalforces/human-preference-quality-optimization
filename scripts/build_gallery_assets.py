@@ -9,21 +9,109 @@ from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageStat
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "portfolio" / "assets"
 PAIRS = ("pair-1", "pair-2", "pair-3", "pair-7")
+DISPLAY_INK_SCALE = {"pair-2": 4}
 
 
 def main():
     for pair_id in PAIRS:
-        before = thread_panel(Image.open(ASSETS / f"{pair_id}-before.png"))
-        after = thread_panel(Image.open(ASSETS / f"{pair_id}-after.png"))
+        before_asset = Image.open(ASSETS / f"{pair_id}-before.png")
+        after_asset = Image.open(ASSETS / f"{pair_id}-after.png")
+        before = thread_panel(before_asset)
+        after = thread_panel(after_asset)
         output = ASSETS / f"{pair_id}-detail-diff.png"
         build_panel(pair_id, before, after).save(output)
         print(output)
+        comparison_output = ASSETS / f"{pair_id}-source-render-comparison.png"
+        source = source_panel(before_asset)
+        build_source_render_panel(pair_id, source, before, after).save(
+            comparison_output,
+            optimize=True,
+        )
+        print(comparison_output)
 
 
 def thread_panel(image):
     image = image.convert("RGB")
     panel_width = image.width // 3
     return image.crop((panel_width, 0, panel_width * 2, image.height))
+
+
+def source_panel(image):
+    image = image.convert("RGB")
+    panel_width = image.width // 3
+    return image.crop((0, 0, panel_width, image.height))
+
+
+def build_source_render_panel(pair_id, source, before, after):
+    """Build a compact, high-contrast comparison with source context."""
+    canvas = Image.new("RGB", (1400, 820), (247, 248, 251))
+    draw = ImageDraw.Draw(canvas)
+    title_color = (17, 24, 39)
+    muted = (91, 100, 115)
+    accent = (239, 68, 68)
+    card = (255, 255, 255)
+
+    draw.text(
+        (70, 48),
+        "Automatic metric gains still need human review",
+        fill=title_color,
+        font=font(42, bold=True),
+    )
+    draw.text(
+        (70, 108),
+        f"{pair_id} · Source context and high-visibility thread renders",
+        fill=muted,
+        font=font(23),
+    )
+
+    cards = (
+        (60, 280, "PREPARED SOURCE", source, 1),
+        (390, 430, "BASELINE", before, 5),
+        (860, 430, "TRACK B", after, 5),
+    )
+    for x, width, label, image, ink_scale in cards:
+        draw.rounded_rectangle((x, 170, x + width, 670), radius=26, fill=card)
+        draw.text((x + 40, 205), label, fill=accent, font=font(20, bold=True))
+        size = 220 if label == "PREPARED SOURCE" else 320
+        image_x = x + (width - size) // 2
+        image_y = 275 if label == "PREPARED SOURCE" else 265
+        displayed = image if label == "PREPARED SOURCE" else darken_ink(image, ink_scale)
+        paste_circle(canvas, displayed, (image_x, image_y), size)
+        if label == "PREPARED SOURCE":
+            draw.text(
+                (x + 38, 535),
+                "Open-license source crop",
+                fill=title_color,
+                font=font(20, bold=True),
+            )
+            draw.text(
+                (x + 38, 575),
+                "same source · blind review pending",
+                fill=muted,
+                font=font(18),
+            )
+        else:
+            draw.text(
+                (x + 72, 610),
+                f"128×128 render · contrast ×{ink_scale}",
+                fill=muted,
+                font=font(18),
+            )
+
+    draw.text(
+        (70, 742),
+        "Actual StringArtio renders · display-only contrast · no generative enhancement",
+        fill=muted,
+        font=font(19),
+    )
+    return canvas
+
+
+def paste_circle(canvas, image, position, size):
+    resized = image.resize((size, size), Image.Resampling.LANCZOS)
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
+    canvas.paste(resized, position, mask)
 
 
 def build_panel(pair_id, before, after):
@@ -39,9 +127,13 @@ def build_panel(pair_id, before, after):
     draw.text((80, 82), "Baseline", fill=(17, 24, 39), font=heading_font)
     draw.text((760, 82), "Track B candidate", fill=(17, 24, 39), font=heading_font)
 
+    ink_scale = DISPLAY_INK_SCALE.get(pair_id, 1)
+    before_display = darken_ink(before, ink_scale)
+    after_display = darken_ink(after, ink_scale)
+
     full_size = (600, 600)
-    before_large = before.resize(full_size, Image.Resampling.LANCZOS)
-    after_large = after.resize(full_size, Image.Resampling.LANCZOS)
+    before_large = before_display.resize(full_size, Image.Resampling.LANCZOS)
+    after_large = after_display.resize(full_size, Image.Resampling.LANCZOS)
     canvas.paste(before_large, (80, 125))
     canvas.paste(after_large, (760, 125))
 
@@ -50,8 +142,8 @@ def build_panel(pair_id, before, after):
         draw.rectangle((x + 150, 275, x + 450, 575), outline=accent, width=5)
 
     zoom_size = (280, 280)
-    before_zoom = before.crop(zoom_box).resize(zoom_size, Image.Resampling.NEAREST)
-    after_zoom = after.crop(zoom_box).resize(zoom_size, Image.Resampling.NEAREST)
+    before_zoom = before_display.crop(zoom_box).resize(zoom_size, Image.Resampling.NEAREST)
+    after_zoom = after_display.crop(zoom_box).resize(zoom_size, Image.Resampling.NEAREST)
     raw_diff = ImageChops.difference(after, before)
     amplified_diff = raw_diff.point(lambda value: min(255, value * 12))
     diff_large = amplified_diff.resize(zoom_size, Image.Resampling.NEAREST)
@@ -74,9 +166,20 @@ def build_panel(pair_id, before, after):
         "• diff brightness multiplied by 12",
         f"• raw mean abs. pixel diff: {mean_difference:.3f}/255",
     ]
+    if ink_scale != 1:
+        notes.insert(3, f"• display ink contrast multiplied by {ink_scale}")
+    note_y = 850 if ink_scale != 1 else 855
+    note_step = 34 if ink_scale != 1 else 38
     for index, note in enumerate(notes):
-        draw.text((1040, 855 + index * 38), note, fill=muted, font=body_font)
+        draw.text((1040, note_y + index * note_step), note, fill=muted, font=body_font)
     return canvas
+
+
+def darken_ink(image, scale):
+    """Increase display contrast while preserving white and the original geometry."""
+    if scale == 1:
+        return image
+    return image.point(lambda value: max(0, 255 - (255 - value) * scale))
 
 
 def font(size, bold=False):
